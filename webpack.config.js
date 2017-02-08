@@ -6,6 +6,9 @@ module.exports = [{
     devtool: "source-map",
     module: {
         loaders: [{
+            test: /\.vue$/,
+            loader: "vue-loader"
+        }, {
             test: /\.js$/,
             loader: 'babel-loader',
             exclude: /node_modules/
