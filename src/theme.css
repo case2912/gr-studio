@@ -4,8 +4,22 @@
     /*エディタ行数部分の文字色*/
     color: gray;
     /*エディタ行数部分の角*/
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    border-left-color: rgba(255,255,255,0.2);
+    border-left-style: solid;
+    border-left-width: medium;
+    border-bottom-color: rgba(255,255,255,0.2);
+    border-bottom-style: solid;
+    border-bottom-width: medium;
+    border-top-color: rgba(255,255,255,0.2);
+    border-top-style: solid;
+    border-top-width: medium;
+    transition-property: border-color;
+    transition-duration: 0.5s
+    /*transition: all 0.5s*/
+
 }
 
 .ace-grimoire-sort .ace_print-margin {
@@ -21,23 +35,40 @@
     /*エディタ文字色*/
     color: #DEDEDE;
     /*エディタ行数部分の角*/
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     /*エディタ部分の角*/
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     transition:all 0.5s;
+
 }
 
 .ace-grimoire-sort:hover {
     background-color: rgba(0, 0, 0, 0.6);
     transition: all 0.5s;
 }
+.ace_editor:hover{
+  border-color: rgba(255, 255, 255, 0.6);
+}
 
 .ace_scroller {
     /*エディタ部分の角*/
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+
+    border-right-color: rgba(255,255,255,0.2);
+    border-right-style: solid;
+    border-right-width: medium;
+    border-bottom-color: rgba(255,255,255,0.2);
+    border-bottom-style: solid;
+    border-bottom-width: medium;
+    border-top-color: rgba(255,255,255,0.2);
+    border-top-style: solid;
+    border-top-width: medium;
+    transition-property: border-color;
+    transition-duration: 0.5s
 }
 
 .ace-grimoire-sort .ace_cursor {
@@ -75,12 +106,14 @@
 
 .ace-grimoire-sort .ace_marker-layer .ace_active-line {
     /*エディタ部分の選択行の色*/
-    background: rgba(0, 0, 0, 0.2)
+    background: rgba(0, 0, 0, 0.);
+
 }
 
 .ace-grimoire-sort .ace_gutter-active-line {
     /*行数部分の選択行の色*/
-    background-color: rgba(0, 0, 0, 0.2)
+    background-color: rgba(0, 0, 0, 0.);
+
 }
 
 .ace-grimoire-sort .ace_stack {

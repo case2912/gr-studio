@@ -1,10 +1,10 @@
 <template>
 <section class="root">
-    <HoriSep topHeight="30px">
+    <HoriSep topHeight="75px">
       <VueButton slot="top"/>
-      <VertSep slot="bottom" rightWidth="250px">
-        <VueButton slot="right"/>
-        <VueButton slot="left"/>
+      <VertSep slot="bottom" rightWidth="300px">
+        <Inspector slot="right"/>
+        <VueEditor slot="left"/>
       </VertSep>
     </HoriSep>
 </section>
@@ -13,6 +13,7 @@
 <script>
 import VueButton from './button.vue';
 import VueEditor from './editor.vue';
+import Inspector from './inspector.vue'
 import VertSep from './vertical-separator.vue';
 import HoriSep from './horizontal-separator.vue';
 export default {
@@ -20,7 +21,8 @@ export default {
         VueButton,
         VueEditor,
         VertSep,
-        HoriSep
+        HoriSep,
+        Inspector
     }
 }
 </script>

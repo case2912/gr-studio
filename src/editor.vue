@@ -9,6 +9,9 @@ export default {}
 
 <style lang="stylus">
 #sort-editor
-    height 100%
-    margin 0px
+  flex 1
+  height 95%
+  top 2.5%
+  width 97.5%
+  left 1.25%
 </style>
