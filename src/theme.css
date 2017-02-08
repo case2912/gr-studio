@@ -1,121 +1,161 @@
-.ace-monokai .ace_gutter {
-  background: #2F3129;
-  color: #8F908A
+.ace-grimoire-sort .ace_gutter {
+    /*エディタ行数部分の背景色*/
+    background: rgba(0, 0, 0, 0.2);
+    /*エディタ行数部分の文字色*/
+    color: gray;
+    /*エディタ行数部分の角*/
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
-.ace-monokai .ace_print-margin {
-  width: 1px;
-  background: #555651
+.ace-grimoire-sort .ace_print-margin {
+    /*正中線の太さ*/
+    width: 0px;
+    /*正中線の色*/
+    background: #1a1a1a
 }
 
-.ace-monokai {
-  background-color: #272822;
-  color: #F8F8F2
+.ace-grimoire-sort {
+    /*エディタ背景色*/
+    background-color: rgba(0, 0, 0, 0.2);
+    /*エディタ文字色*/
+    color: #DEDEDE;
+    /*エディタ行数部分の角*/
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /*エディタ部分の角*/
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition:all 0.5s;
 }
 
-.ace-monokai .ace_cursor {
-  color: #F8F8F0
+.ace-grimoire-sort:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.5s;
 }
 
-.ace-monokai .ace_marker-layer .ace_selection {
-  background: #49483E
+.ace_scroller {
+    /*エディタ部分の角*/
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-.ace-monokai.ace_multiselect .ace_selection.ace_start {
-  box-shadow: 0 0 3px 0px #272822;
+.ace-grimoire-sort .ace_cursor {
+    /*カーソルの色*/
+    color: rgb(255, 255, 255);
 }
 
-.ace-monokai .ace_marker-layer .ace_step {
-  background: rgb(102, 82, 0)
+.ace-grimoire-sort .ace_marker-layer .ace_selection {
+    /*選択範囲の色*/
+    background: rgba(122, 157, 214, 0.7);
+    /*選択範囲の角*/
+    border-radius: 1px
 }
 
-.ace-monokai .ace_marker-layer .ace_bracket {
-  margin: -1px 0 0 -1px;
-  border: 1px solid #49483E
+.ace-grimoire-sort.ace_multiselect .ace_selection.ace_start {
+    box-shadow: 0 0 3px 0px #000000;
 }
 
-.ace-monokai .ace_marker-layer .ace_active-line {
-  background: #202020
+.ace-grimoire-sort .ace_marker-layer .ace_step {
+    background: rgba(102, 82, 0)
 }
 
-.ace-monokai .ace_gutter-active-line {
-  background-color: #272727
+.ace-grimoire-sort .ace_marker-layer .ace_bracket {
+    margin: -1px 0 0 -1px;
+    border: 1px solid #888888
 }
 
-.ace-monokai .ace_marker-layer .ace_selected-word {
-  border: 1px solid #49483E
+.ace-grimoire-sort .ace_marker-layer .ace_highlight {
+    border: 1px solid rgb(110, 119, 0);
+    border-bottom: 0;
+    box-shadow: inset 0 -1px rgb(110, 119, 0);
+    margin: -1px 0 0 -1px;
+    background: rgba(255, 235, 0, 0.1)
 }
 
-.ace-monokai .ace_invisible {
-  color: #52524d
+.ace-grimoire-sort .ace_marker-layer .ace_active-line {
+    /*エディタ部分の選択行の色*/
+    background: rgba(0, 0, 0, 0.2)
 }
 
-.ace-monokai .ace_entity.ace_name.ace_tag,
-.ace-monokai .ace_keyword,
-.ace-monokai .ace_meta.ace_tag,
-.ace-monokai .ace_storage {
-  color: #F92672
+.ace-grimoire-sort .ace_gutter-active-line {
+    /*行数部分の選択行の色*/
+    background-color: rgba(0, 0, 0, 0.2)
 }
 
-.ace-monokai .ace_punctuation,
-.ace-monokai .ace_punctuation.ace_tag {
-  color: #fff
+.ace-grimoire-sort .ace_stack {
+    background-color: rgb(66, 90, 44)
 }
 
-.ace-monokai .ace_constant.ace_character,
-.ace-monokai .ace_constant.ace_language,
-.ace-monokai .ace_constant.ace_numeric,
-.ace-monokai .ace_constant.ace_other {
-  color: #AE81FF
+.ace-grimoire-sort .ace_marker-layer .ace_selected-word {
+    border: 1px solid #888888
 }
 
-.ace-monokai .ace_invalid {
-  color: #F8F8F0;
-  background-color: #F92672
+.ace-grimoire-sort .ace_invisible {
+    color: #343434
 }
 
-.ace-monokai .ace_invalid.ace_deprecated {
-  color: #F8F8F0;
-  background-color: #AE81FF
+.ace-grimoire-sort .ace_keyword, .ace-grimoire-sort .ace_meta, .ace-grimoire-sort .ace_storage, .ace-grimoire-sort .ace_storage.ace_type, .ace-grimoire-sort .ace_support.ace_type {
+    /*シンタックスハイライト*/
+    color: #C397D8
 }
 
-.ace-monokai .ace_support.ace_constant,
-.ace-monokai .ace_support.ace_function {
-  color: #66D9EF
+.ace-grimoire-sort .ace_keyword.ace_operator {
+    /*シンタックスハイライト*/
+    color: #70C0B1
 }
 
-.ace-monokai .ace_fold {
-  background-color: #A6E22E;
-  border-color: #F8F8F2
+.ace-grimoire-sort .ace_constant.ace_character, .ace-grimoire-sort .ace_constant.ace_language, .ace-grimoire-sort .ace_constant.ace_numeric, .ace-grimoire-sort .ace_keyword.ace_other.ace_unit, .ace-grimoire-sort .ace_support.ace_constant, .ace-grimoire-sort .ace_variable.ace_parameter {
+    /*シンタックスハイライト*/
+    color: #E78C45
 }
 
-.ace-monokai .ace_storage.ace_type,
-.ace-monokai .ace_support.ace_class,
-.ace-monokai .ace_support.ace_type {
-  font-style: italic;
-  color: #66D9EF
+.ace-grimoire-sort .ace_constant.ace_other {
+    /*シンタックスハイライト*/
+    color: #EEEEEE
 }
 
-.ace-monokai .ace_entity.ace_name.ace_function,
-.ace-monokai .ace_entity.ace_other,
-.ace-monokai .ace_entity.ace_other.ace_attribute-name,
-.ace-monokai .ace_variable {
-  color: #A6E22E
+.ace-grimoire-sort .ace_invalid {
+    color: #CED2CF;
+    background-color: #DF5F5F
 }
 
-.ace-monokai .ace_variable.ace_parameter {
-  font-style: italic;
-  color: #FD971F
+.ace-grimoire-sort .ace_invalid.ace_deprecated {
+    color: #CED2CF;
+    background-color: #B798BF
 }
 
-.ace-monokai .ace_string {
-  color: #E6DB74
+.ace-grimoire-sort .ace_fold {
+    /*{}で省略した際の背景色*/
+    background-color: #7AA6DA;
+    /*{}で省略した際の枠の色*/
+    border-color: #DEDEDE
 }
 
-.ace-monokai .ace_comment {
-  color: #75715E
+.ace-grimoire-sort .ace_entity.ace_name.ace_function, .ace-grimoire-sort .ace_support.ace_function, .ace-grimoire-sort .ace_variable {
+    color: #7AA6DA
 }
 
-.ace-monokai .ace_indent-guide {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWPQ0FD0ZXBzd/wPAAjVAoxeSgNeAAAAAElFTkSuQmCC) right repeat-y
+.ace-grimoire-sort .ace_support.ace_class, .ace-grimoire-sort .ace_support.ace_type {
+    color: #E7C547
+}
+
+.ace-grimoire-sort .ace_heading, .ace-grimoire-sort .ace_markup.ace_heading, .ace-grimoire-sort .ace_string {
+    color: #B9CA4A
+}
+
+.ace-grimoire-sort .ace_entity.ace_name.ace_tag, .ace-grimoire-sort .ace_entity.ace_other.ace_attribute-name, .ace-grimoire-sort .ace_meta.ace_tag, .ace-grimoire-sort .ace_string.ace_regexp, .ace-grimoire-sort .ace_variable {
+    color: #D54E53
+}
+
+.ace-grimoire-sort .ace_comment {
+    color: #969896
+}
+
+.ace-grimoire-sort .ace_c9searchresults.ace_keyword {
+    color: #C2C280
+}
+
+.ace-grimoire-sort .ace_indent-guide {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYFBXV/8PAAJoAXX4kT2EAAAAAElFTkSuQmCC) right repeat-y
 }

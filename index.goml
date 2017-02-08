@@ -1,6 +1,6 @@
 <goml>
-    <import-material typeName="mat" src="index.sort" />
+    <import-material typeName="initial-material" src="index.sort" />
     <renderer>
-        <render-quad material="new(mat)" />
+        <render-quad material="new(initial-material)" />
     </renderer>
 </goml>
