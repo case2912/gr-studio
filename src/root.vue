@@ -1,5 +1,6 @@
 <template>
 <section class="root">
+  <TitleBox/>
     <HoriSep topHeight="75px">
       <VueHeader slot="top" leftWidth="75px" rightWidth="500px">
         <Logo slot="header-left" src="../biblio_logo.svg"/>
@@ -27,6 +28,7 @@ import Empty from './empty.vue';
 import Logo from './logo.vue';
 import HideCodeButton from './hide-code-button.vue';
 import CreateButton from './create-button.vue'
+import TitleBox from "./title-box.vue";
 export default {
     components: {
         VueButton,
@@ -38,7 +40,8 @@ export default {
         Empty,
         Logo,
         HideCodeButton,
-        CreateButton
+        CreateButton,
+        TitleBox
     }
 }
 </script>
@@ -48,6 +51,7 @@ body, html
     height 100%
     width 100%
     margin 0
+    font-family: "Rounded Mplus 1c";
 body
     position relative
 .root

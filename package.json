@@ -4,7 +4,7 @@
   "description": "sort-editor",
   "scripts": {
     "build": "webpack",
-    "start": "npm run build -- -w"
+    "start": "webpack-dev-server -w"
   },
   "author": "case2912",
   "license": "ISC",
