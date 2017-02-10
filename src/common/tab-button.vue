@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="tab-button-container">
+  <div class="tab-button-container" :style="{'width':tabWidth}">
     <div class="tab-button">
       <p v-if="open" v-on:click="toggle">{{label}}on</p>
       <p v-else v-on:click="toggle">{{label}}off</p>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  props:["label"],
+  props:["label","tabWidth"],
   data:function(){
     return {
       open:false
@@ -26,10 +26,13 @@ export default {
 <style lang="stylus">
   .tab-button-container
     flex 1
-    padding 10px
+    padding-top 10px
+    /*padding-left 10px*/
   .tab-button
     border 1px solid white
-    border-radius 10px
-    background-color rgba(0,0,0,0.1)
+    border-top-right-radius 10px
+    border-top-left-radius 10px
+    border medium solid rgba(255,255,255,0.2)
+    background-color rgba(0,0,0,0.2)
     flex 1
 </style>

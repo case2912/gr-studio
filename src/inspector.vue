@@ -16,9 +16,9 @@ export default {}
   background rgba(0, 0, 0, 0.2)
   border-radius 5px
   border medium solid rgba(255,255,255,0.2)
+  padding 10px
 .inspector-container
   display flex
   flex 1
   height 100%
-  padding 10px
 </style>

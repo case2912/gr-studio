@@ -8,8 +8,13 @@
       </VueHeader>
       <VertSep slot="bottom" rightWidth="300px">
         <Inspector slot="right"/>
-        <HoriSep topHeight="50px" slot="left">
-          <TabButton label="test" slot="top"/>
+        <HoriSep slot="left">
+          <VertSep rightWidth="500px" slot="top" class="editor-tab-container" style="padding-left: 10px;">
+            <TabButton label="test" slot="left" tabWidth="150px"/>
+            <TabButton label="test" slot="left" tabWidth="150px"/>
+            <TabButton label="test" slot="left" tabWidth="150px"/>
+          <Empty slot="right"/>
+        </VertSep>
           <Editor slot="bottom"/>
         </HoriSep>
       </VertSep>
@@ -68,4 +73,8 @@ body
     width 100%
     height 100%
     margin 0px
+.editor-tab-container
+  >div
+    display flex
+    flex-direction row
 </style>
