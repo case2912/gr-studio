@@ -108,13 +108,9 @@ arr-union@^2.0.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/arr-union/-/arr-union-2.1.0.tgz#20f9eab5ec70f5c7d215b1077b1c39161d292c7d"
 
-array-flatten@1.1.1:
+array-flatten@1.1.1, "array-flatten@>= 0.0.2":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
-
-"array-flatten@>= 0.0.2":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-2.1.1.tgz#426bb9da84090c1838d812c8150af20a8331e296"
 
 array-union@^1.0.1:
   version "1.0.2"
@@ -1872,6 +1868,23 @@ graceful-fs@~3.0.2:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
+grimoirejs-cauldron@^2.1.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/grimoirejs-cauldron/-/grimoirejs-cauldron-2.3.3.tgz#89c46b75fef227c600f9be6d799d4ca21d060548"
+  dependencies:
+    chalk "^1.1.3"
+    del "^2.2.2"
+    fs-extra "^1.0.0"
+    glob "^7.1.0"
+    handlebars "^4.0.6"
+    js-comments "^0.5.4"
+    progress "^1.1.8"
+    prompt "^1.0.0"
+    uglify-js "^2.7.3"
+    unzip "^0.1.11"
+    watch "^1.0.1"
+    yargs "^6.3.0"
+
 grimoirejs-cauldron@beta:
   version "2.3.1-beta6"
   resolved "https://registry.yarnpkg.com/grimoirejs-cauldron/-/grimoirejs-cauldron-2.3.1-beta6.tgz#b156cf9e45f4a31725f917efe39b6320de47c983"
@@ -1889,22 +1902,31 @@ grimoirejs-cauldron@beta:
     watch "^1.0.1"
     yargs "^6.3.0"
 
-grimoirejs-fundamental@^0.12.7:
-  version "0.12.7"
-  resolved "https://registry.yarnpkg.com/grimoirejs-fundamental/-/grimoirejs-fundamental-0.12.7.tgz#6c9e846403c0c68fb0f7100b4c2af59d51971166"
+grimoirejs-fundamental@beta:
+  version "0.13.2-beta2"
+  resolved "https://registry.yarnpkg.com/grimoirejs-fundamental/-/grimoirejs-fundamental-0.13.2-beta2.tgz#5b6b70dfe6d451164fb821a204df05bbbd513bf4"
   dependencies:
     "@types/json5" "0.0.29"
     json5 "^0.5.1"
 
-grimoirejs-math@^1.10.1:
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/grimoirejs-math/-/grimoirejs-math-1.11.2.tgz#008951363e232a5471b850354095b4ff9ae27b7b"
+grimoirejs-math@beta:
+  version "1.9.0-beta1"
+  resolved "https://registry.yarnpkg.com/grimoirejs-math/-/grimoirejs-math-1.9.0-beta1.tgz#c76c8a17bf226858d22bbaab6c1f8347685fcd2f"
   dependencies:
     gl-matrix "^2.3.2"
+    grimoirejs "^0.13.0"
 
-grimoirejs@^0.14.3:
-  version "0.14.3"
-  resolved "https://registry.yarnpkg.com/grimoirejs/-/grimoirejs-0.14.3.tgz#d1ad86d29da610200bd07a77eae0d9477bee5543"
+grimoirejs@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/grimoirejs/-/grimoirejs-0.13.0.tgz#100cb7e193cb54acc3971ad29c4d51f042625700"
+  dependencies:
+    "@types/node" "^6.0.47"
+    events "^1.1.1"
+    grimoirejs-cauldron "^2.1.3"
+
+grimoirejs@beta:
+  version "0.14.4-beta7"
+  resolved "https://registry.yarnpkg.com/grimoirejs/-/grimoirejs-0.14.4-beta7.tgz#2dc949b2a75c355c37aaf9d7328df840904d88cf"
   dependencies:
     "@types/node" "^6.0.47"
     events "^1.1.1"
@@ -2404,7 +2426,7 @@ loader-runner@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.3.0.tgz#f482aea82d543e07921700d5a46ef26fdac6b8a2"
 
-loader-utils@^0.2.10, loader-utils@^0.2.11, loader-utils@^0.2.16, loader-utils@^0.2.7, loader-utils@^0.2.9, loader-utils@~0.2.2:
+loader-utils@0.2.x, loader-utils@^0.2.10, loader-utils@^0.2.11, loader-utils@^0.2.16, loader-utils@^0.2.7, loader-utils@^0.2.9, loader-utils@~0.2.2:
   version "0.2.16"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.16.tgz#f08632066ed8282835dff88dfb52704765adee6d"
   dependencies:
@@ -2420,6 +2442,10 @@ lodash.camelcase@^4.3.0:
 lodash.memoize@^4.1.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
+
+lodash.throttle@^4.0.0:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
 
 lodash.uniq@^4.3.0:
   version "4.5.0"
@@ -2472,6 +2498,10 @@ macaddress@^0.2.8:
   dependencies:
     buffers "~0.1.1"
     readable-stream "~1.0.0"
+
+material-colors@^1.0.0:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/material-colors/-/material-colors-1.2.5.tgz#5292593e6754cb1bcc2b98030e4e0d6a3afc9ea1"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.16"
@@ -2534,6 +2564,10 @@ mime-types@^2.1.12, mime-types@~2.1.11, mime-types@~2.1.13, mime-types@~2.1.7:
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.14.tgz#f7ef7d97583fcaf3b7d282b6f8b5679dab1e94ee"
   dependencies:
     mime-db "~1.26.0"
+
+mime@1.2.x:
+  version "1.2.11"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-1.2.11.tgz#58203eed86e3a5ef17aed2b7d9ebd47f0a60dd10"
 
 mime@1.3.4, mime@^1.3.4:
   version "1.3.4"
@@ -3814,6 +3848,10 @@ timers-browserify@^2.0.2:
   dependencies:
     setimmediate "^1.0.4"
 
+tinycolor2@^1.1.2:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
+
 to-arraybuffer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/to-arraybuffer/-/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"
@@ -3868,6 +3906,10 @@ uid-number@~0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
 
+underscore@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
+
 uniq@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/uniq/-/uniq-1.0.1.tgz#b31c5ae8254844a3a8281541ce2b04b865a734ff"
@@ -3896,6 +3938,13 @@ unzip@^0.1.11:
     pullstream ">= 0.4.1 < 1"
     readable-stream "~1.0.31"
     setimmediate ">= 1.0.1 < 2"
+
+url-loader@^0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/url-loader/-/url-loader-0.5.7.tgz#67e8779759f8000da74994906680c943a9b0925d"
+  dependencies:
+    loader-utils "0.2.x"
+    mime "1.2.x"
 
 url-parse@1.0.x:
   version "1.0.5"
@@ -3987,6 +4036,14 @@ vm-browserify@0.0.4:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"
   dependencies:
     indexof "0.0.1"
+
+vue-color@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/vue-color/-/vue-color-2.0.5.tgz#c7796190e17a76cd6010257610521437f39de3c2"
+  dependencies:
+    lodash.throttle "^4.0.0"
+    material-colors "^1.0.0"
+    tinycolor2 "^1.1.2"
 
 vue-hot-reload-api@^2.0.1:
   version "2.0.8"
@@ -4170,13 +4227,9 @@ winston@2.1.x:
     pkginfo "0.3.x"
     stack-trace "0.0.x"
 
-wordwrap@0.0.2:
+wordwrap@0.0.2, wordwrap@~0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
-
-wordwrap@~0.0.2:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
 
 wrap-ansi@^2.0.0:
   version "2.1.0"

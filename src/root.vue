@@ -70,4 +70,25 @@ body
     width 100%
     height 100%
     margin 0px
+input[type="range"]
+  opacity 0.8
+  -webkit-appearance none;
+  width 100%;
+  background #eee;
+  box-shadow 0 0 1px #666;
+  border-radius 20px;
+
+input[type="range"]::-webkit-slider-thumb
+  -webkit-appearance none;
+  background #333;
+  width 20px;
+  height 20px;
+  border-radius 50%;
+
+input[type="range"]::-webkit-slider-thumb:hover
+  background #4286f4;
+
+input[type="range"]::-webkit-slider-thumb:active
+  background #116bfc;
+
 </style>

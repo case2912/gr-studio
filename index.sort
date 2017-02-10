@@ -1,5 +1,4 @@
 @Pass{
-@BlendFunc(ONE,ONE)
 FS_PREC(mediump,float)
 #ifdef VS
   attribute vec3 position;
@@ -12,8 +11,12 @@ FS_PREC(mediump,float)
 #ifdef FS
 @{ type:"color",default:"orange"}
 uniform vec4 color;
+
+@{range:"0,10",default:"0"}
+uniform float a;
  void main() {
    gl_FragColor = color;
+   gl_FragColor.rgb*= a;
  }
 #endif
 }

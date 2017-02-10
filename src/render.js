@@ -10,13 +10,16 @@ import text from '../index.sort';
 import uuid from 'node-uuid';
 import ace from 'brace';
 import MaterialParser from "./material/MaterialParser";
+import Store from "./stores/root";
 import {
     watch
 } from 'watchjs';
 import 'brace/mode/glsl';
 import './theme';
-
 const render = () => {
+  gr(function(){
+    window.$$ = gr("#main");
+  });
     const sort = {
         text: text
     }
@@ -30,17 +33,27 @@ const render = () => {
     editor.getSession().setValue(sort.text);
     setInterval(() => {
         sort.text = editor.getValue();
-    }, 3000);
+    }, 1000);
     let lastId = 'initial-material';
     watch(sort, "text", async() => {
         const id = uuid.v4();
+
         // try {
         const obj = await Parser.parse(sort.text);
         const gl = gr("#main").rootNodes[0].companion.get('gl');
         const material = new Material(gl, obj);
         gr("#main")("render-quad").setAttribute('material', material);
-        console.log(MaterialParser.getUniformVariables(material));
-
+        const container = gr("#main")("render-quad").first().getComponent("MaterialContainer");
+        const uniforms = MaterialParser.getUniformVariables(material);
+        const intervalId = setInterval(function(){
+          if(container.materialReady){
+            for(let key in uniforms){
+              uniforms[key].value = container.getAttribute(key);
+            }
+            Store.commit("setUniforms",uniforms);
+            clearInterval(intervalId);
+          }
+        },100);
         //console.log(material);
         // } catch (e) {
         //     console.log(1);

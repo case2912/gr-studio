@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="material-inspector">
     <MaterialHeader label="uniform variables"/>
-    <Attribute/>
+    <Attribute v-for="uniform in uniforms" :attribute="uniform" isUniform="true"/>
     <MaterialHeader label="macro variables"/>
   </div>
 </template>
