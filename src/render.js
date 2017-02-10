@@ -19,6 +19,17 @@ import './theme';
 const render = () => {
   gr(function(){
     window.$$ = gr("#main");
+    const container = gr("#main")("render-quad").first().getComponent("MaterialContainer");
+    const intervalId = setInterval(function(){
+      const uniforms = MaterialParser.getUniformVariables(container.material);
+      if(container.materialReady){
+        for(let key in uniforms){
+          uniforms[key].value = container.getAttribute(key);
+        }
+        Store.commit("setUniforms",uniforms);
+        clearInterval(intervalId);
+      }
+    },100);
   });
     const sort = {
         text: text

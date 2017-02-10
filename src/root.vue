@@ -13,7 +13,7 @@
                 <IconButton src="./biblio_logo.svg" slot="right" />
             </VertSep>
         </VertSep>
-        <VertSep slot="bottom" rightWidth="300px">
+        <VertSep slot="bottom" rightWidth="400px">
             <HoriSep slot="right">
                 <VertSep slot="top" class="tab-container">
                     <TabButton label="test" slot="left" tabWidth="100px" />

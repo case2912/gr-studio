@@ -24,6 +24,7 @@
       .color-box-float
         position relative
         transform translate(-50%,50%)
+        z-index 5
         .color-box-float-inner
           position absolute
           right 0px
