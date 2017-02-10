@@ -1,13 +1,9 @@
 <template>
 <section class="root">
-  <TitleBox/>
-    <HoriSep topHeight="75px">
-      <VueHeader slot="top" leftWidth="75px" rightWidth="500px">
-        <Logo slot="header-left" src="../biblio_logo.svg"/>
-        <HideCodeButton slot="header-button"/>
-        <CreateButton slot="header-button2"/>
-        <Empty slot="header-middle"/>
-        <VueButton slot="header-right"/>
+    <HoriSep topHeight="50px">
+      <VueHeader slot="top" leftWidth="512px" rightWidth="500px">
+        <TitleBox slot="header-left"/>
+        <Empty/>
       </VueHeader>
       <VertSep slot="bottom" rightWidth="300px">
         <Inspector slot="right"/>
@@ -25,9 +21,7 @@ import Inspector from './inspector.vue'
 import VertSep from './vertical-separator.vue';
 import HoriSep from './horizontal-separator.vue';
 import Empty from './empty.vue';
-import Logo from './logo.vue';
 import HideCodeButton from './hide-code-button.vue';
-import CreateButton from './create-button.vue'
 import TitleBox from "./title-box.vue";
 export default {
     components: {
@@ -38,9 +32,7 @@ export default {
         HoriSep,
         Inspector,
         Empty,
-        Logo,
         HideCodeButton,
-        CreateButton,
         TitleBox
     }
 }
