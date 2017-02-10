@@ -9,6 +9,7 @@ import Material from 'grimoirejs-fundamental/ref/Material/Material';
 import text from '../index.sort';
 import uuid from 'node-uuid';
 import ace from 'brace';
+import MaterialParser from "./material/MaterialParser";
 import {
     watch
 } from 'watchjs';
@@ -38,6 +39,9 @@ const render = () => {
         const gl = gr("#main").rootNodes[0].companion.get('gl');
         const material = new Material(gl, obj);
         gr("#main")("render-quad").setAttribute('material', material);
+        console.log(MaterialParser.getUniformVariables(material));
+
+        //console.log(material);
         // } catch (e) {
         //     console.log(1);
         // } finally {}

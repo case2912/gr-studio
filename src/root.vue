@@ -30,6 +30,7 @@ import TitleBox from "./title-box.vue";
 import IconButton from "./common/icon-button.vue";
 import TabButton from './common/tab-button.vue';
 import ShareState from "./common/share-state.vue";
+import Store from "./stores/root";
 export default {
     components: {
         VueButton,
@@ -49,7 +50,8 @@ export default {
       click:function(){
         alert("clicked")
       }
-    }
+    },
+    store:Store
 }
 </script>
 

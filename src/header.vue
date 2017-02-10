@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="header-separator-container">
-    <div class="header-left" :style="{'width':leftWidth}">
+    <div class="header-left">
       <slot name="header-left"/>
     </div>
     <div class="header-middle">
@@ -27,12 +27,11 @@ export default {
   flex 1
   height 100%
   align-items stretch
-  >.header-button
-    width 100px
-  >.header-button2
-    width 40px
   >.header-middle
     flex-grow 1
   >div
-    height 100%
+    height 50px
+    display flex
+    flex-direction column
+    justify-content space-around
 </style>

@@ -1,13 +1,19 @@
 <template lang="html">
   <div class="inspector-container">
     <div id="inspector">
+      <Material/>
     </div>
   </div>
 
 </template>
 
 <script>
-export default {}
+import Material from "./inspector/Material.vue";
+export default {
+  components:{
+    Material
+  }
+}
 </script>
 
 <style lang="stylus">
