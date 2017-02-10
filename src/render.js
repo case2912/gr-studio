@@ -23,7 +23,7 @@ const render = () => {
     editor.getSession().setMode('ace/mode/glsl');
     editor.setTheme('ace/theme/grimoire-sort');
     editor.setOptions({
-        fontFamily: "ricty",
+        fontFamily: "Rounded Mplus 1c",
         fontSize: "13pt"
     });
     editor.getSession().setValue(sort.text);

@@ -8,7 +8,10 @@
       </VueHeader>
       <VertSep slot="bottom" rightWidth="300px">
         <Inspector slot="right"/>
-        <Editor slot="left"/>
+        <HoriSep topHeight="50px" slot="left">
+          <TabButton label="test" slot="top"/>
+          <Editor slot="bottom"/>
+        </HoriSep>
       </VertSep>
     </HoriSep>
 </section>
@@ -25,6 +28,7 @@ import Empty from './empty.vue';
 import HideCodeButton from './hide-code-button.vue';
 import TitleBox from "./title-box.vue";
 import IconButton from "./common/icon-button.vue";
+import TabButton from './common/tab-button.vue';
 export default {
     components: {
         VueButton,
@@ -36,7 +40,8 @@ export default {
         Empty,
         HideCodeButton,
         TitleBox,
-        IconButton
+        IconButton,
+        TabButton
     },
     methods:{
       click:function(){

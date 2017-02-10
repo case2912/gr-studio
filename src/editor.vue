@@ -1,5 +1,7 @@
 <template lang="html">
-  <div id="sort-editor">
+  <div class="editor-container">
+    <div id="sort-editor">
+    </div>
   </div>
 </template>
 
@@ -10,8 +12,8 @@ export default {}
 <style lang="stylus">
 #sort-editor
   flex 1
-  height 95%
-  top 2.5%
-  width 97.5%
-  left 1.25%
+.editor-container
+  display flex
+  padding 10px
+  flex 1
 </style>
