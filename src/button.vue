@@ -20,4 +20,5 @@ export default {
   border-radius 10px
   border thin solid #ff00ff
   margin 0px
+  
 </style>

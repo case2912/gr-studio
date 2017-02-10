@@ -1,6 +1,8 @@
 <template lang="html">
-  <div class="icon-button" v-on:click="click">
-    <img :src="src"/>
+  <div class="icon-button-container">
+    <div class="icon-button" v-on:click="click">
+      <img :src="src"/>
+    </div>
   </div>
 </template>
 
@@ -16,13 +18,18 @@ export default {
 </script>
 
 <style lang="stylus">
+.icon-button-container
+  display flex
+  justify-content center
+  flex-direction column
   .icon-button
-    width 36px
-    height 36px
-    border 1px solid white
+    width 50px
+    height 50px
+    border medium solid white
     border-radius 10px
     background-color rgba(0,0,0,0.1)
     padding 3px
+
     img
       width 100%
       height 100%

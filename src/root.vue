@@ -1,18 +1,36 @@
 <template>
 <section class="root">
-    <HoriSep>
-      <VueHeader slot="top" leftWidth="512px" rightWidth="500px">
-        <TitleBox slot="header-left"/>
-        <ShareState slot="header-middle"/>
-        <IconButton src="./biblio_logo.svg" slot="header-right"/>
-      </VueHeader>
-      <VertSep slot="bottom" rightWidth="300px">
-        <Inspector slot="right"/>
-        <HoriSep topHeight="50px" slot="left">
-          <TabButton label="test" slot="top"/>
-          <Editor slot="bottom"/>
-        </HoriSep>
-      </VertSep>
+    <HoriSep  class="vue-header">
+        <VertSep slot="top" leftWidth="512px" rightWidth="300px">
+            <VertSep slot="left" class="tab-container">
+                <TitleBox slot="left" />
+                <ShareState slot="left" />
+            </VertSep>
+            <VertSep slot="right" class="tab-container">
+                <IconButton src="./biblio_logo.svg" slot="right" />
+                <IconButton src="./biblio_logo.svg" slot="right" />
+                <IconButton src="./biblio_logo.svg" slot="right" />
+                <IconButton src="./biblio_logo.svg" slot="right" />
+            </VertSep>
+        </VertSep>
+        <VertSep slot="bottom" rightWidth="300px">
+            <HoriSep slot="right">
+                <VertSep slot="top" class="tab-container">
+                    <TabButton label="test" slot="left" tabWidth="100px" />
+                    <TabButton label="test" slot="left" tabWidth="100px" />
+                    <TabButton label="test" slot="left" tabWidth="100px" />
+                </VertSep>
+                <Inspector slot="bottom" />
+            </HoriSep>
+            <HoriSep slot="left">
+                <VertSep slot="top" class="tab-container" style="padding-left: 10px;">
+                    <TabButton label="test" slot="left" tabWidth="150px" />
+                    <TabButton label="test" slot="left" tabWidth="150px" />
+                    <TabButton label="test" slot="left" tabWidth="150px" />
+                </VertSep>
+                <Editor slot="bottom" />
+            </HoriSep>
+        </VertSep>
     </HoriSep>
 </section>
 </template>
@@ -91,4 +109,11 @@ input[type="range"]::-webkit-slider-thumb:hover
 input[type="range"]::-webkit-slider-thumb:active
   background #116bfc;
 
+.tab-container
+  >div
+    display flex
+    flex-direction row
+.vue-header
+  >div
+    height 90px
 </style>
