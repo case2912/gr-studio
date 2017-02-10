@@ -4,6 +4,7 @@
       <VueHeader slot="top" leftWidth="512px" rightWidth="500px">
         <TitleBox slot="header-left"/>
         <Empty/>
+        <IconButton src="./biblio_logo.svg" slot="header-right"/>
       </VueHeader>
       <VertSep slot="bottom" rightWidth="300px">
         <Inspector slot="right"/>
@@ -23,6 +24,7 @@ import HoriSep from './horizontal-separator.vue';
 import Empty from './empty.vue';
 import HideCodeButton from './hide-code-button.vue';
 import TitleBox from "./title-box.vue";
+import IconButton from "./common/icon-button.vue";
 export default {
     components: {
         VueButton,
@@ -33,7 +35,13 @@ export default {
         Inspector,
         Empty,
         HideCodeButton,
-        TitleBox
+        TitleBox,
+        IconButton
+    },
+    methods:{
+      click:function(){
+        alert("clicked")
+      }
     }
 }
 </script>

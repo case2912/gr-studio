@@ -3,16 +3,10 @@
     <div class="header-left" :style="{'width':leftWidth}">
       <slot name="header-left"/>
     </div>
-    <div class="header-button">
-      <slot name="header-button"/>
-    </div>
-    <div class="header-button2">
-      <slot name="header-button2"/>
-    </div>
     <div class="header-middle">
       <slot name="header-middle"/>
     </div>
-    <div class="header-right" :style="{'width':rightWidth}">
+    <div class="header-right">
       <slot name="header-right"/>
     </div>
   </div>
@@ -26,6 +20,8 @@ export default {
 
 <style lang="stylus">
 .header-separator-container
+  margin 10px 0px
+  padding 0 20px
   flex-direction row
   display flex
   flex 1
