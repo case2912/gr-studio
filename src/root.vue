@@ -1,10 +1,16 @@
 <template>
 <section class="root">
     <HoriSep topHeight="75px">
-      <VueButton slot="top"/>
+      <VueHeader slot="top" leftWidth="75px" rightWidth="500px">
+        <Logo slot="header-left" src="../biblio_logo.svg"/>
+        <HideCodeButton slot="header-button"/>
+        <CreateButton slot="header-button2"/>
+        <Empty slot="header-middle"/>
+        <VueButton slot="header-right"/>
+      </VueHeader>
       <VertSep slot="bottom" rightWidth="300px">
         <Inspector slot="right"/>
-        <VueEditor slot="left"/>
+        <Editor slot="left"/>
       </VertSep>
     </HoriSep>
 </section>
@@ -12,17 +18,27 @@
 
 <script>
 import VueButton from './button.vue';
-import VueEditor from './editor.vue';
+import Editor from './editor.vue';
+import VueHeader from './header.vue';
 import Inspector from './inspector.vue'
 import VertSep from './vertical-separator.vue';
 import HoriSep from './horizontal-separator.vue';
+import Empty from './empty.vue';
+import Logo from './logo.vue';
+import HideCodeButton from './hide-code-button.vue';
+import CreateButton from './create-button.vue'
 export default {
     components: {
         VueButton,
-        VueEditor,
+        Editor,
+        VueHeader,
         VertSep,
         HoriSep,
-        Inspector
+        Inspector,
+        Empty,
+        Logo,
+        HideCodeButton,
+        CreateButton
     }
 }
 </script>
