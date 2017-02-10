@@ -9,25 +9,23 @@
 
 <script>
 export default {
-  props:["label","tabWidth"],
-  data:function(){
-    return {
-      open:false
-    };
-  },
-  methods:{
-    toggle:function(){
-      this.open = !this.open;
+    props: ["label", "tabWidth"],
+    data: function() {
+        return {
+            open: false
+        };
+    },
+    methods: {
+        toggle: function() {
+            this.open = !this.open;
+        }
     }
-  }
 }
 </script>
 
 <style lang="stylus">
   .tab-button-container
-    flex 1
     padding-top 10px
-    /*padding-left 10px*/
   .tab-button
     border 1px solid white
     border-top-right-radius 10px

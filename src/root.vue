@@ -1,23 +1,36 @@
 <template>
 <section class="root">
-    <HoriSep>
-      <VueHeader slot="top" leftWidth="512px" rightWidth="500px">
-        <TitleBox slot="header-left"/>
-        <ShareState slot="header-middle"/>
-        <IconButton src="./biblio_logo.svg" slot="header-right"/>
-      </VueHeader>
-      <VertSep slot="bottom" rightWidth="300px">
-        <Inspector slot="right"/>
-        <HoriSep slot="left">
-          <VertSep rightWidth="500px" slot="top" class="editor-tab-container" style="padding-left: 10px;">
-            <TabButton label="test" slot="left" tabWidth="150px"/>
-            <TabButton label="test" slot="left" tabWidth="150px"/>
-            <TabButton label="test" slot="left" tabWidth="150px"/>
-          <Empty slot="right"/>
+    <HoriSep  class="vue-header">
+        <VertSep slot="top" leftWidth="512px" rightWidth="300px">
+            <VertSep slot="left" class="tab-container">
+                <TitleBox slot="left" />
+                <ShareState slot="left" />
+            </VertSep>
+            <VertSep slot="right" class="tab-container">
+                <IconButton src="./biblio_logo.svg" slot="right" />
+                <IconButton src="./biblio_logo.svg" slot="right" />
+                <IconButton src="./biblio_logo.svg" slot="right" />
+                <IconButton src="./biblio_logo.svg" slot="right" />
+            </VertSep>
         </VertSep>
-          <Editor slot="bottom"/>
-        </HoriSep>
-      </VertSep>
+        <VertSep slot="bottom" rightWidth="300px">
+            <HoriSep slot="right">
+                <VertSep slot="top" class="tab-container">
+                    <TabButton label="test" slot="left" tabWidth="100px" />
+                    <TabButton label="test" slot="left" tabWidth="100px" />
+                    <TabButton label="test" slot="left" tabWidth="100px" />
+                </VertSep>
+                <Inspector slot="bottom" />
+            </HoriSep>
+            <HoriSep slot="left">
+                <VertSep slot="top" class="tab-container" style="padding-left: 10px;">
+                    <TabButton label="test" slot="left" tabWidth="150px" />
+                    <TabButton label="test" slot="left" tabWidth="150px" />
+                    <TabButton label="test" slot="left" tabWidth="150px" />
+                </VertSep>
+                <Editor slot="bottom" />
+            </HoriSep>
+        </VertSep>
     </HoriSep>
 </section>
 </template>
@@ -50,10 +63,10 @@ export default {
         TabButton,
         ShareState
     },
-    methods:{
-      click:function(){
-        alert("clicked")
-      }
+    methods: {
+        click: function() {
+            alert("clicked")
+        }
     }
 }
 </script>
@@ -73,8 +86,11 @@ body
     width 100%
     height 100%
     margin 0px
-.editor-tab-container
+.tab-container
   >div
     display flex
     flex-direction row
+.vue-header
+  >div
+    height 90px
 </style>
