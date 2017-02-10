@@ -32,7 +32,10 @@ export default {
 
 <style lang="stylus">
   .title-box-container
-    height 50px
+    height 100%
+    display flex
+    flex-direction column
+    justify-content center
     width 512px
     text-shadow: 1px 1px 1px #000;
     input
@@ -47,15 +50,16 @@ export default {
       display flex
       justify-content center
       flex-direction column
-      height 100%
+      height 50px
       border-radius 10px
-      background-color rgba(0,0,0,0);
+      background-color rgba(0,0,0,0.1);
       &:hover
         background-color rgba(0,0,0,0.3);
     .title-box-static-inner
       padding 0 10px
       cursor pointer
       p
+        font-family: "Rounded Mplus 1c";
         color white
         font-size 26px
         font-weight 400

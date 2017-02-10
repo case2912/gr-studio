@@ -1,9 +1,9 @@
 <template>
 <section class="root">
-    <HoriSep topHeight="50px">
+    <HoriSep topHeight="70px">
       <VueHeader slot="top" leftWidth="512px" rightWidth="500px">
         <TitleBox slot="header-left"/>
-        <Empty/>
+        <ShareState slot="header-middle"/>
         <IconButton src="./biblio_logo.svg" slot="header-right"/>
       </VueHeader>
       <VertSep slot="bottom" rightWidth="300px">
@@ -25,6 +25,7 @@ import Empty from './empty.vue';
 import HideCodeButton from './hide-code-button.vue';
 import TitleBox from "./title-box.vue";
 import IconButton from "./common/icon-button.vue";
+import ShareState from "./common/share-state.vue";
 export default {
     components: {
         VueButton,
@@ -36,7 +37,8 @@ export default {
         Empty,
         HideCodeButton,
         TitleBox,
-        IconButton
+        IconButton,
+        ShareState
     },
     methods:{
       click:function(){
