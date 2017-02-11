@@ -22,10 +22,11 @@ export default {
   display flex
   justify-content center
   flex-direction column
+  padding 10px 10px 10px 0px
   .icon-button
-    width 50px
-    height 50px
-    border medium solid white
+    width 40px
+    height 40px
+    border medium solid rgba(255,255,255,0.2)
     border-radius 10px
     background-color rgba(0,0,0,0.1)
     padding 3px
@@ -33,6 +34,7 @@ export default {
     img
       width 100%
       height 100%
+      opacity 0.4
     &:hover
       background-color rgba(0,0,0,0.5)
       cursor pointer

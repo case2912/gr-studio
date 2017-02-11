@@ -1,24 +1,24 @@
 <template>
 <section class="root">
-    <HoriSep  class="vue-header">
-        <VertSep slot="top" leftWidth="512px" rightWidth="300px">
+    <HoriSep class="vue-header">
+        <VertSep slot="top" leftWidth="512px" rightWidth="400px">
             <VertSep slot="left" class="tab-container">
                 <TitleBox slot="left" />
                 <ShareState slot="left" />
             </VertSep>
             <VertSep slot="right" class="tab-container">
-                <IconButton src="./biblio_logo.svg" slot="right" />
-                <IconButton src="./biblio_logo.svg" slot="right" />
-                <IconButton src="./biblio_logo.svg" slot="right" />
-                <IconButton src="./biblio_logo.svg" slot="right" />
+                <IconButton src="../SVG/file-empty.svg" slot="right" />
+                <IconButton src="../SVG/copy.svg" slot="right" />
+                <IconButton src="../SVG/enlarge.svg" slot="right" />
+                <IconButton src="../SVG/home3.svg" slot="right" />
             </VertSep>
         </VertSep>
         <VertSep slot="bottom" rightWidth="300px">
             <HoriSep slot="right">
-                <VertSep slot="top" class="tab-container">
-                    <TabButton label="test" slot="left" tabWidth="100px" />
-                    <TabButton label="test" slot="left" tabWidth="100px" />
-                    <TabButton label="test" slot="left" tabWidth="100px" />
+                <VertSep slot="top" class="tab-container" style="padding-right: 10px;">
+                    <TabButton label="test" slot="left" tabWidth="80px" />
+                    <TabButton label="test" slot="left" tabWidth="80px" />
+                    <TabButton label="test" slot="left" tabWidth="80px" />
                 </VertSep>
                 <Inspector slot="bottom" />
             </HoriSep>
@@ -36,28 +36,20 @@
 </template>
 
 <script>
-import VueButton from './button.vue';
 import Editor from './editor.vue';
-import VueHeader from './header.vue';
 import Inspector from './inspector.vue'
 import VertSep from './vertical-separator.vue';
 import HoriSep from './horizontal-separator.vue';
-import Empty from './empty.vue';
-import HideCodeButton from './hide-code-button.vue';
 import TitleBox from "./title-box.vue";
 import IconButton from "./common/icon-button.vue";
 import TabButton from './common/tab-button.vue';
 import ShareState from "./common/share-state.vue";
 export default {
     components: {
-        VueButton,
         Editor,
-        VueHeader,
         VertSep,
         HoriSep,
         Inspector,
-        Empty,
-        HideCodeButton,
         TitleBox,
         IconButton,
         TabButton,
@@ -76,7 +68,7 @@ body, html
     height 100%
     width 100%
     margin 0
-    font-family: "Rounded Mplus 1c";
+    font-family "Rounded Mplus 1c"
 body
     position relative
 .root
@@ -90,7 +82,4 @@ body
   >div
     display flex
     flex-direction row
-.vue-header
-  >div
-    height 90px
 </style>

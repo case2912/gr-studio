@@ -27,7 +27,7 @@
     "css-loader": "^0.26.1",
     "grimoirejs": "^0.14.3",
     "grimoirejs-fundamental": "^0.12.7",
-    "grimoirejs-math": "^1.10.1",
+    "grimoirejs-math": "^1.11.2",
     "node-uuid": "^1.4.7",
     "vue": "^2.1.10",
     "vue-loader": "^10.3.0",

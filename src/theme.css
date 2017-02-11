@@ -4,7 +4,6 @@
     /*エディタ行数部分の文字色*/
     color: gray;
     /*エディタ行数部分の角*/
-    border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 
     border-left-color: rgba(255,255,255,0.2);
@@ -35,7 +34,6 @@
     /*エディタ文字色*/
     color: #DEDEDE;
     /*エディタ行数部分の角*/
-    border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     /*エディタ部分の角*/
     border-top-right-radius: 5px;

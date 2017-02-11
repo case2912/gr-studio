@@ -14,7 +14,6 @@ export default {}
   flex 1
 .editor-container
   display flex
-  padding 10px
-  padding-top 0px
+  padding 0px 5px 10px 10px
   flex 1
 </style>

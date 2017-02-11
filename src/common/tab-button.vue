@@ -27,7 +27,6 @@ export default {
   .tab-button-container
     padding-top 10px
   .tab-button
-    border 1px solid white
     border-top-right-radius 10px
     border-top-left-radius 10px
     border medium solid rgba(255,255,255,0.2)
