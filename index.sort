@@ -1,6 +1,6 @@
 @Pass{
 FS_PREC(mediump,float)
-
+@ExposeMacro(int,test,TEST,1)
 varying vec2 vUV;
 #ifdef VS
   attribute vec3 position;
@@ -14,23 +14,24 @@ varying vec2 vUV;
 #endif
 
 #ifdef FS
-@{ type:"color",default:"green"}
-uniform vec4 color;
 
-@{range:"0,10",default:"0"}
-uniform float a;
+@{default:"./images/i1.jpg"}
+uniform sampler2D from;
 
-@{range:"0,10",default:"1"}
-uniform float b;
+@{default:"./images/i2.jpg"}
+uniform sampler2D to;
 
-uniform float _time;
+@{range:"0,1",default:0.5}
+uniform float progress;
 
-uniform sampler2D texture;
+vec4 transition(vec4 c1,vec4 c2,float t){
+  return (c2 - c1) * t + c1;
+}
 
  void main() {
-   gl_FragColor = texture2D(texture,vUV);
-   gl_FragColor.a = 1.0;
-   gl_FragColor.rgb*= sin(a + gl_FragCoord.x * gl_FragCoord.y * b + _time/100.);
+   vec4 fc = texture2D(from,vUV);
+   vec4 dc = texture2D(to,vUV);
+   gl_FragColor = transition(fc,dc,progress);
  }
 #endif
 }
