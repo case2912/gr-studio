@@ -13,7 +13,7 @@
                 <IconButton src="../SVG/home3.svg" slot="right" />
             </VertSep>
         </VertSep>
-        <VertSep slot="bottom" rightWidth="300px">
+        <VertSep slot="bottom" rightWidth="400px">
             <HoriSep slot="right">
                 <VertSep slot="top" class="tab-container" style="padding-right: 10px;">
                     <TabButton label="test" slot="left" tabWidth="80px" />
@@ -44,6 +44,7 @@ import TitleBox from "./title-box.vue";
 import IconButton from "./common/icon-button.vue";
 import TabButton from './common/tab-button.vue';
 import ShareState from "./common/share-state.vue";
+import Store from "./stores/root";
 export default {
     components: {
         Editor,
@@ -55,11 +56,12 @@ export default {
         TabButton,
         ShareState
     },
-    methods: {
-        click: function() {
-            alert("clicked")
-        }
-    }
+    methods:{
+      click:function(){
+        alert("clicked")
+      }
+    },
+    store:Store
 }
 </script>
 
@@ -78,6 +80,27 @@ body
     width 100%
     height 100%
     margin 0px
+input[type="range"]
+  opacity 0.8
+  -webkit-appearance none;
+  width 100%;
+  background #eee;
+  box-shadow 0 0 1px #666;
+  border-radius 20px;
+
+input[type="range"]::-webkit-slider-thumb
+  -webkit-appearance none;
+  background #333;
+  width 20px;
+  height 20px;
+  border-radius 50%;
+
+input[type="range"]::-webkit-slider-thumb:hover
+  background #4286f4;
+
+input[type="range"]::-webkit-slider-thumb:active
+  background #116bfc;
+
 .tab-container
   >div
     display flex
