@@ -10,7 +10,7 @@ export default {
     props: ["attribute"],
     data: function() {
         return {
-            img: "",
+            img: this.attribute.attributes.default,
             file: "",
             changing:false
         };
@@ -40,7 +40,7 @@ export default {
           this.changing = false;
           return;
         }
-        this.img = "";
+        this.img = this.attribute.attributes.default;
         this.file = "";
       });
     }

@@ -9,10 +9,18 @@ export default {
   props:["attribute"],
   methods:{
     changed:function(){
+      if(this.isInt){
+        this.attribute.value = Math.floor(this.attribute.value);
+      }
       this.$store.commit("setMaterialAttribute",{
         name:this.attribute.name,
         value:this.attribute.value
       })
+    }
+  },
+  computed:{
+    isInt:function(){
+      return this.attribute.type === "int";
     }
   }
 }

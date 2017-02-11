@@ -3,6 +3,8 @@
     <MaterialHeader label="uniform variables"/>
     <Attribute v-for="uniform in uniforms" :attribute="uniform" isUniform="true"/>
     <MaterialHeader label="macro variables"/>
+    <Attribute v-for="macro in macros" :attribute="macro" isUniform="false"/>
+
   </div>
 </template>
 
@@ -13,7 +15,7 @@ import MaterialHeader from "./header.vue";
 import Attribute from "./attribute.vue";
 export default {
   computed:{
-    ...mapState(["uniforms"])
+    ...mapState(["uniforms","macros"])
   },
   components:{
     MaterialHeader,

@@ -16,20 +16,30 @@ import {
 } from 'watchjs';
 import 'brace/mode/glsl';
 import './theme';
+
+function reloadAttributes(){
+  const container = $$("render-quad").first().getComponent("MaterialContainer");
+  const intervalId = setInterval(function(){
+    const uniforms = MaterialParser.getUniformVariables(container.material);
+    const macros = MaterialParser.getMacroVariables(container.material);
+    if(container.materialReady){
+      for(let key in uniforms){
+        uniforms[key].value = container.getAttribute(key);
+      }
+      for(let key in macros){
+        macros[key].value = container.getAttribute(key);
+      }
+      Store.commit("setUniforms",uniforms);
+      Store.commit("setMacros",macros);
+
+      clearInterval(intervalId);
+    }
+  },100);
+}
 const render = () => {
   gr(function(){
     window.$$ = gr("#main");
-    const container = gr("#main")("render-quad").first().getComponent("MaterialContainer");
-    const intervalId = setInterval(function(){
-      const uniforms = MaterialParser.getUniformVariables(container.material);
-      if(container.materialReady){
-        for(let key in uniforms){
-          uniforms[key].value = container.getAttribute(key);
-        }
-        Store.commit("setUniforms",uniforms);
-        clearInterval(intervalId);
-      }
-    },100);
+    reloadAttributes();
   });
     const sort = {
         text: text
@@ -54,17 +64,7 @@ const render = () => {
         const gl = gr("#main").rootNodes[0].companion.get('gl');
         const material = new Material(gl, obj);
         gr("#main")("render-quad").setAttribute('material', material);
-        const container = gr("#main")("render-quad").first().getComponent("MaterialContainer");
-        const uniforms = MaterialParser.getUniformVariables(material);
-        const intervalId = setInterval(function(){
-          if(container.materialReady){
-            for(let key in uniforms){
-              uniforms[key].value = container.getAttribute(key);
-            }
-            Store.commit("setUniforms",uniforms);
-            clearInterval(intervalId);
-          }
-        },100);
+        reloadAttributes();
         //console.log(material);
         // } catch (e) {
         //     console.log(1);

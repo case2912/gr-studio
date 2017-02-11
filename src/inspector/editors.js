@@ -8,19 +8,20 @@ import Sampler2D from "./editors/sampler2D.vue";
 export default function(attribute) {
     switch (attribute.type) {
         case "float":
-            if (typeof attribute.attributes["range"] === "string") {
+        case "int":
+            if (attribute.attributes && typeof attribute.attributes["range"] === "string") {
                 return FloatRange;
             } else {
                 return Float;
             }
         case "vec3":
-            if (attribute.attributes["type"] === "color") {
+            if (attribute.attributes && attribute.attributes["type"] === "color") {
                 return Color3;
             } else {
               return Vector;
             }
         case "vec4":
-            if (attribute.attributes["type"] === "color") {
+            if (attribute.attributes && attribute.attributes["type"] === "color") {
                 return Color4;
             } else {
               return Vector;
