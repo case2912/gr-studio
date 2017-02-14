@@ -15,7 +15,7 @@ export default {
     apply:function(v){
       this.attribute.value = v;
       this.$store.commit("setMaterialAttribute",{
-        name:attribute.name,
+        name:this.attribute.name,
         value:v
       });
     }

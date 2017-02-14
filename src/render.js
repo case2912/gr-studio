@@ -16,6 +16,7 @@ import {
 } from 'watchjs';
 import 'brace/mode/glsl';
 import './theme';
+import "./webcam";
 
 function reloadAttributes(){
   const container = $$("render-quad").first().getComponent("MaterialContainer");
