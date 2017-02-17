@@ -58,7 +58,6 @@ gr.registerComponent("WebcamShaderResource", {
                 const onStart = function() {
                     video.removeEventListener('canplay',onStart, true);
                     video.play();
-
                 };
                 video.addEventListener('canplay', onStart, true);
                 video.src = url.createObjectURL(localMediaStream);
@@ -72,8 +71,6 @@ gr.registerComponent("WebcamShaderResource", {
         },1000);
     }
 });
-
-gr.overrideDeclaration("goml",["WebcamShaderResource"]);
 
 UniformResolverRegistry.add("WEBCAM", (valInfo) => (proxy, args) => {
   proxy.uniformTexture2D(valInfo.name,webcamTexture);
