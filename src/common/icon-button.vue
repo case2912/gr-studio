@@ -26,16 +26,16 @@ export default {
   .icon-button
     width 40px
     height 40px
-    border medium solid rgba(255,255,255,0.2)
-    border-radius 10px
+    border thin solid rgba(255,255,255,0.2)
+    border-radius 1px
     background-color rgba(0,0,0,0.1)
     padding 3px
 
     img
       width 100%
       height 100%
-      opacity 0.4
+      opacity 0.6
     &:hover
-      background-color rgba(0,0,0,0.5)
+      background-color rgba(255,255,255,0.7)
       cursor pointer
 </style>

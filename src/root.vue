@@ -1,6 +1,6 @@
 <template>
 <section class="root">
-    <HoriSep class="vue-header">
+    <HoriSep class="vue-header" topHeight="70px">
         <VertSep slot="top" leftWidth="512px" rightWidth="400px">
             <VertSep slot="left" class="tab-container">
                 <TitleBox slot="left" />
@@ -13,20 +13,20 @@
                 <IconButton src="../SVG/home3.svg" slot="right" />
             </VertSep>
         </VertSep>
-        <VertSep slot="bottom" rightWidth="400px">
-            <HoriSep slot="right">
+        <VertSep slot="bottom" rightWidth="500px">
+            <HoriSep slot="right" topHeight="40px">
                 <VertSep slot="top" class="tab-container" style="padding-right: 10px;">
-                    <TabButton label="test" slot="left" tabWidth="80px" />
-                    <TabButton label="test" slot="left" tabWidth="80px" />
-                    <TabButton label="test" slot="left" tabWidth="80px" />
+                    <TabButton label="" slot="left" tabWidth="80px" />
+                    <TabButton label="" slot="left" tabWidth="80px" />
+                    <TabButton label="" slot="left" tabWidth="80px" />
                 </VertSep>
                 <Inspector slot="bottom" />
             </HoriSep>
-            <HoriSep slot="left">
+            <HoriSep slot="left" topHeight="40px">
                 <VertSep slot="top" class="tab-container" style="padding-left: 10px;">
-                    <TabButton label="test" slot="left" tabWidth="150px" />
-                    <TabButton label="test" slot="left" tabWidth="150px" />
-                    <TabButton label="test" slot="left" tabWidth="150px" />
+                    <TabButton label="" slot="left" tabWidth="150px" />
+                    <TabButton label="" slot="left" tabWidth="150px" />
+                    <TabButton label="" slot="left" tabWidth="150px" />
                 </VertSep>
                 <Editor slot="bottom" />
             </HoriSep>
@@ -56,12 +56,12 @@ export default {
         TabButton,
         ShareState
     },
-    methods:{
-      click:function(){
-        alert("clicked")
-      }
+    methods: {
+        click: function() {
+            alert("clicked")
+        }
     },
-    store:Store
+    store: Store
 }
 </script>
 
@@ -86,7 +86,7 @@ input[type="range"]
   width 100%;
   background #eee;
   box-shadow 0 0 1px #666;
-  border-radius 20px;
+  border-radius 5px;
 
 input[type="range"]::-webkit-slider-thumb
   -webkit-appearance none;

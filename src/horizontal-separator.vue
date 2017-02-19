@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="horizontal-separator-container">
-    <div class="top">
+    <div class="top" :style="{'height':topHeight}">
       <slot name="top"/>
     </div>
     <div class="bottom" >
@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  props:["topHeight"]
 }
 </script>
 

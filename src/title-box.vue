@@ -48,7 +48,6 @@ export default {
       border 0px solid transparent
       color white
       font-size 26px
-      /*text-shadow: 1px 1px 1px #000;*/
       padding 0 10px
       font-family "Rounded Mplus 1c"
     .rounded-background
@@ -56,7 +55,7 @@ export default {
       justify-content center
       flex-direction column
       height 50px
-      border-radius 10px
+      border-radius 5px
       background-color rgba(0,0,0,0.1);
       &:hover
         background-color rgba(0,0,0,0.3);

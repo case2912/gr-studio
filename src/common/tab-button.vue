@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="tab-button-container" :style="{'width':tabWidth}">
     <div class="tab-button">
-      <p v-if="open" v-on:click="toggle">{{label}}on</p>
-      <p v-else v-on:click="toggle">{{label}}off</p>
+      <p v-if="open" v-on:click="toggle">{{label}}</p>
+      <p v-else v-on:click="toggle">{{label}}</p>
     </div>
   </div>
 </template>
@@ -26,10 +26,13 @@ export default {
 <style lang="stylus">
   .tab-button-container
     padding-top 10px
+  
   .tab-button
-    border-top-right-radius 10px
-    border-top-left-radius 10px
-    border medium solid rgba(255,255,255,0.2)
+    height 100%
+    border-top-right-radius 5px
+    border-top-left-radius 5px
+    border thin solid rgba(255,255,255,0.2)
+    border-bottom 0px
     background-color rgba(0,0,0,0.2)
     flex 1
 </style>
